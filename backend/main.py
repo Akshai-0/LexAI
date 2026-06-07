@@ -10,7 +10,10 @@ app = FastAPI(title="LexAI", version="5.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_origins=[
+        "https://lex-ai-alpha.vercel.app",
+        "https://lex-ai-git-main-akshai-0s-projects.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
