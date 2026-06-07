@@ -2,6 +2,7 @@ import { useState, useRef } from 'react'
 import { Upload, FileText, ShieldAlert, Zap, Loader2 } from 'lucide-react'
 import axios from 'axios'
 
+const API_BASE = 'https://lexai-1.onrender.com'
 export default function Dashboard({ onResult, history }) {
   const [drag, setDrag]       = useState(false)
   const [loading, setLoading] = useState(false)
@@ -40,7 +41,7 @@ export default function Dashboard({ onResult, history }) {
     const form = new FormData()
     form.append('file', file)
     try {
-      const res = await axios.post('/analyze', form)
+      const res = await axios.post(`${API_BASE}/analyze`, form)
       setProgress(100); setStage('Complete!')
       setTimeout(() => { setLoading(false); setProgress(0); setStage(''); onResult(res.data, file) }, 350)
     } catch (err) {
