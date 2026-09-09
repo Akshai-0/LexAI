@@ -4,6 +4,7 @@ A full-stack platform that analyzes PDF contracts and extracts key contractual i
 
 LIVE DEMO
 https://lex-ai-alpha.vercel.app/
+
 No login, subscriptions, or paid API needed.
 
 
